@@ -34,7 +34,7 @@ module Dragonfly
       nil
     end
     
-    def url_for(uid)
+    def url_for(uid, opts={})
       file = bucket.file uid
       file.url
     rescue
