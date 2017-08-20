@@ -33,6 +33,13 @@ module Dragonfly
     rescue
       nil
     end
+    
+    def url_for(uid)
+      file = bucket.file uid
+      file.url
+    rescue
+      nil
+    end
 
     def destroy(uid)
       bucket.file(uid).delete
