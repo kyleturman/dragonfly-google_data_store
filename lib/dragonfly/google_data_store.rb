@@ -4,14 +4,14 @@ require 'google/cloud/storage'
 
 module Dragonfly
   class GoogleDataStore
-    attr_reader :project, :keyfile, :bucket_name, :root_path, @base_url
+    attr_reader :project, :keyfile, :bucket_name, :root_path, :base_url
 
     def initialize(opts)
-      @project = opts[:project]
-      @keyfile = opts[:keyfile]
+      @project     = opts[:project]
+      @keyfile     = opts[:keyfile]
       @bucket_name = opts[:bucket]
-      @root_path = opts[:root_path]
-      @base_url = opts[:base_url] || "https://storage.googleapis.com"
+      @root_path   = opts[:root_path]
+      @base_url    = opts[:base_url] || "https://storage.googleapis.com"
     end
 
     def write(object, opts = {})
