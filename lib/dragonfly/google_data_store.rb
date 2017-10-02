@@ -37,7 +37,7 @@ module Dragonfly
     end
     
     def url_for(uid, opts={})
-      "#{base_url}/#{bucket}/#{root_path}#{uid}"
+      "#{base_url}/#{bucket_name}/#{root_path}#{uid}"
     end
 
     def destroy(uid)
