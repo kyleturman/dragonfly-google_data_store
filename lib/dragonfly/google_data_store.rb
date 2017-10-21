@@ -28,7 +28,6 @@ module Dragonfly
       file = bucket.file full_path(uid)
       content = file.download
       content.rewind
-      print_r "\n\nTESTING\n\n"
       [
         content.read,
         file.metadata,
